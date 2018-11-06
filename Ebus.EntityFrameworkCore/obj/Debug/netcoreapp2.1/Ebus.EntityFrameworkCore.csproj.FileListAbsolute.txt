@@ -1,0 +1,8 @@
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.deps.json
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.dll
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.csprojAssemblyReference.cache
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.AssemblyInfoInputs.cache
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.AssemblyInfo.cs
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.runtimeconfig.json
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.runtimeconfig.dev.json
