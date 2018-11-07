@@ -1,0 +1,12 @@
+G:\study\git\ebusSoft\Ebus.Domain\bin\Debug\netcoreapp2.1\Ebus.Domain.deps.json
+G:\study\git\ebusSoft\Ebus.Domain\bin\Debug\netcoreapp2.1\Ebus.Domain.dll
+G:\study\git\ebusSoft\Ebus.Domain\bin\Debug\netcoreapp2.1\Ebus.Domain.pdb
+G:\study\git\ebusSoft\Ebus.Domain\bin\Debug\netcoreapp2.1\Utils.dll
+G:\study\git\ebusSoft\Ebus.Domain\bin\Debug\netcoreapp2.1\Utils.pdb
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.csprojAssemblyReference.cache
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.csproj.CoreCompileInputs.cache
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.AssemblyInfoInputs.cache
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.AssemblyInfo.cs
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.csproj.CopyComplete
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.dll
+G:\study\git\ebusSoft\Ebus.Domain\obj\Debug\netcoreapp2.1\Ebus.Domain.pdb

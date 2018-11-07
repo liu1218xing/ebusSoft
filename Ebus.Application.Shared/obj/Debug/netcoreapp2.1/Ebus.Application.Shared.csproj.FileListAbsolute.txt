@@ -1,0 +1,9 @@
+G:\study\git\ebusSoft\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.deps.json
+G:\study\git\ebusSoft\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
+G:\study\git\ebusSoft\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb
+G:\study\git\ebusSoft\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.csprojAssemblyReference.cache
+G:\study\git\ebusSoft\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.csproj.CoreCompileInputs.cache
+G:\study\git\ebusSoft\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.AssemblyInfoInputs.cache
+G:\study\git\ebusSoft\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.AssemblyInfo.cs
+G:\study\git\ebusSoft\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
+G:\study\git\ebusSoft\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb

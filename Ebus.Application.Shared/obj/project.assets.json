@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\liuxing\\.nuget\\packages\\": {},
+    "C:\\Users\\dzliuxing\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\git\\Ebus\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj",
+      "projectUniqueName": "G:\\study\\git\\ebusSoft\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj",
       "projectName": "Ebus.Application.Shared",
-      "projectPath": "G:\\git\\Ebus\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj",
-      "packagesPath": "C:\\Users\\liuxing\\.nuget\\packages\\",
-      "outputPath": "G:\\git\\Ebus\\Ebus.Application.Shared\\obj\\",
+      "projectPath": "G:\\study\\git\\ebusSoft\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj",
+      "packagesPath": "C:\\Users\\dzliuxing\\.nuget\\packages\\",
+      "outputPath": "G:\\study\\git\\ebusSoft\\Ebus.Application.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\liuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dzliuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

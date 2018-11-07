@@ -13,4 +13,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ebus.Core\Ebus.Core.csproj" />
+  </ItemGroup>
+
 </Project>

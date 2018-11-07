@@ -945,6 +945,42 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "Ebus.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Ebus.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ebus.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ebus.Core.dll": {}
+        }
+      },
+      "Ebus.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ebus.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ebus.Domain.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
+        }
       }
     }
   },
@@ -3538,10 +3574,26 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Ebus.Core/1.0.0": {
+      "type": "project",
+      "path": "../Ebus.Core/Ebus.Core.csproj",
+      "msbuildProject": "../Ebus.Core/Ebus.Core.csproj"
+    },
+    "Ebus.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Ebus.Domain/Ebus.Domain.csproj",
+      "msbuildProject": "../Ebus.Domain/Ebus.Domain.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/Utils.csproj",
+      "msbuildProject": "../Utils/Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Ebus.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 2.1.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.4",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.4",
@@ -3549,23 +3601,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\liuxing\\.nuget\\packages\\": {},
+    "C:\\Users\\dzliuxing\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\git\\Ebus\\Ebus.EntityFrameworkCore\\Ebus.EntityFrameworkCore.csproj",
+      "projectUniqueName": "G:\\study\\git\\ebusSoft\\Ebus.EntityFrameworkCore\\Ebus.EntityFrameworkCore.csproj",
       "projectName": "Ebus.EntityFrameworkCore",
-      "projectPath": "G:\\git\\Ebus\\Ebus.EntityFrameworkCore\\Ebus.EntityFrameworkCore.csproj",
-      "packagesPath": "C:\\Users\\liuxing\\.nuget\\packages\\",
-      "outputPath": "G:\\git\\Ebus\\Ebus.EntityFrameworkCore\\obj\\",
+      "projectPath": "G:\\study\\git\\ebusSoft\\Ebus.EntityFrameworkCore\\Ebus.EntityFrameworkCore.csproj",
+      "packagesPath": "C:\\Users\\dzliuxing\\.nuget\\packages\\",
+      "outputPath": "G:\\study\\git\\ebusSoft\\Ebus.EntityFrameworkCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\liuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dzliuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3577,7 +3629,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\study\\git\\ebusSoft\\Ebus.Core\\Ebus.Core.csproj": {
+              "projectPath": "G:\\study\\git\\ebusSoft\\Ebus.Core\\Ebus.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
