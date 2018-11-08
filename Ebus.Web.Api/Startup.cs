@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Ebus.EntityFrameworkCore.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +34,28 @@ namespace Ebus.Web.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<EbusDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //#region AutoFac
+
+            //实例化 AutoFac  容器   
+            //var builder = new ContainerBuilder();
+
+            ////注册要通过反射创建的组件
+            ////builder.RegisterType<AdvertisementServices>().As<IAdvertisementServices>();
+
+            //var assemblysServices = Assembly.Load("Blog.Core.Services");
+            //builder.RegisterAssemblyTypes(assemblysServices).AsImplementedInterfaces();//指定已扫描程序集中的类型注册为提供所有其实现的接口。
+            //var assemblysRepository = Assembly.Load("Blog.Core.Repository");
+            //builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
+
+            ////将services填充到Autofac容器生成器中
+            //builder.Populate(services);
+
+            ////使用已进行的组件登记创建新容器
+            //var ApplicationContainer = builder.Build();
+
+            //#endregion
+
+            //return new AutofacServiceProvider(ApplicationContainer);//第三方IOC接管 core内置DI容器
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

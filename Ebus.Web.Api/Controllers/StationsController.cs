@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ebus.Web.Api.Controllers
 {
+    [Route("api/Stations")]
     public class StationsController : Controller
     {
         public IActionResult Index()
