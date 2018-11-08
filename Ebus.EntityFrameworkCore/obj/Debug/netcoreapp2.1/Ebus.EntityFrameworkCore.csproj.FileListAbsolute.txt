@@ -24,3 +24,13 @@ G:\study\git\ebusSoft\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.Enti
 G:\study\git\ebusSoft\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.csproj.CopyComplete
 G:\study\git\ebusSoft\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.dll
 G:\study\git\ebusSoft\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.pdb
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.pdb
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.Core.dll
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.Domain.dll
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Utils.dll
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.Core.pdb
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Ebus.Domain.pdb
+G:\git\Ebus\Ebus.EntityFrameworkCore\bin\Debug\netcoreapp2.1\Utils.pdb
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.csproj.CopyComplete
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.dll
+G:\git\Ebus\Ebus.EntityFrameworkCore\obj\Debug\netcoreapp2.1\Ebus.EntityFrameworkCore.pdb

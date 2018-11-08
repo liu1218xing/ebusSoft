@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IRepository;
+using IRepository.Stations;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ebus.Web.Api.Controllers
@@ -9,9 +11,22 @@ namespace Ebus.Web.Api.Controllers
     [Route("api/Stations")]
     public class StationsController : Controller
     {
-        public IActionResult Index()
+        private readonly IStationsRepository _stationsRepository;
+        private readonly IUnitOfWork _unitOfWork;
+
+        public StationsController(IStationsRepository stationsRepository,
+            IUnitOfWork unitOfWork)
         {
-            return View();
+            _stationsRepository = stationsRepository;
+            _unitOfWork = unitOfWork;
         }
+        
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var stations = await _stationsRepository.GetAllStationsAsync();
+            return Ok(stations);
+        }
+
     }
 }

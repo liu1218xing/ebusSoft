@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ebus.EntityFrameworkCore\Ebus.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\IRepository\IRepository.csproj" />
+  </ItemGroup>
+
+</Project>

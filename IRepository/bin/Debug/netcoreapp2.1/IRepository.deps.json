@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "IRepository/1.0.0": {
+        "dependencies": {
+          "Ebus.Core": "1.0.0"
+        },
+        "runtime": {
+          "IRepository.dll": {}
+        }
+      },
+      "Ebus.Core/1.0.0": {
+        "dependencies": {
+          "Ebus.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Ebus.Core.dll": {}
+        }
+      },
+      "Ebus.Domain/1.0.0": {
+        "dependencies": {
+          "Utils": "1.0.0"
+        },
+        "runtime": {
+          "Ebus.Domain.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "runtime": {
+          "Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ebus.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ebus.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

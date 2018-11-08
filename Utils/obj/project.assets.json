@@ -681,23 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dzliuxing\\.nuget\\packages\\": {},
+    "C:\\Users\\liuxing\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\study\\git\\ebusSoft\\Utils\\Utils.csproj",
+      "projectUniqueName": "G:\\git\\Ebus\\Utils\\Utils.csproj",
       "projectName": "Utils",
-      "projectPath": "G:\\study\\git\\ebusSoft\\Utils\\Utils.csproj",
-      "packagesPath": "C:\\Users\\dzliuxing\\.nuget\\packages\\",
-      "outputPath": "G:\\study\\git\\ebusSoft\\Utils\\obj\\",
+      "projectPath": "G:\\git\\Ebus\\Utils\\Utils.csproj",
+      "packagesPath": "C:\\Users\\liuxing\\.nuget\\packages\\",
+      "outputPath": "G:\\git\\Ebus\\Utils\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dzliuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\liuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

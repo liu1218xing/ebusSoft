@@ -7,3 +7,12 @@ G:\study\git\ebusSoft\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.
 G:\study\git\ebusSoft\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.AssemblyInfo.cs
 G:\study\git\ebusSoft\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.dll
 G:\study\git\ebusSoft\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.pdb
+G:\git\Ebus\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Application.deps.json
+G:\git\Ebus\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Application.dll
+G:\git\Ebus\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Application.pdb
+G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.csprojAssemblyReference.cache
+G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.csproj.CoreCompileInputs.cache
+G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.AssemblyInfoInputs.cache
+G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.AssemblyInfo.cs
+G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.dll
+G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.pdb

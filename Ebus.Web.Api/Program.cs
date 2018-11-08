@@ -37,7 +37,7 @@ namespace Ebus.Web.Api
                 try
                 {
                     var myContext = services.GetRequiredService<EbusDbContext>();
-                    //EbusDbContext.SeedAsync(myContext, loggerFactory).Wait();
+                    MyContextSeed.SeedAsync(myContext, loggerFactory).Wait();
                 }
                 catch (Exception e)
                 {

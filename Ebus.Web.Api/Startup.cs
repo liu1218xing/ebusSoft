@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Ebus.EntityFrameworkCore.EntityFrameworkCore;
+using IRepository;
+using IRepository.Stations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,6 +18,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Repository;
+using Repository.Stations;
 
 namespace Ebus.Web.Api
 {
@@ -33,7 +37,11 @@ namespace Ebus.Web.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<EbusDbContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IStationsRepository, StationsRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             //#region AutoFac
 
             //实例化 AutoFac  容器   
@@ -69,7 +77,7 @@ namespace Ebus.Web.Api
             {
                 app.UseHsts();
             }
-
+            app.UseExceptionHandler(); 
             app.UseHttpsRedirection();
             app.UseMvc();
         }

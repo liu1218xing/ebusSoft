@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Ebus.EntityFrameworkCore.Migrations
 {
-    [DbContext(typeof(EbusDbContext))]
+    [DbContext(typeof(MyContextSeed))]
     partial class EbusDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Ebus.EntityFrameworkCore.Migrations
 {
-    [DbContext(typeof(EbusDbContext))]
+    [DbContext(typeof(MyContextSeed))]
     [Migration("20181107042001_InitialCreate")]
     partial class InitialCreate
     {
