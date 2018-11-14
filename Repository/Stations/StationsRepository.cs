@@ -23,7 +23,7 @@ namespace Repository.Stations
             _ebusDbContext.Stations.Add(station);
         }
 
-        public async Task<IEnumerable<Station>> GetAllStationsAsync()
+        public async Task<List<Station>> GetAllStationsAsync()
         {
             return await _ebusDbContext.Stations.ToListAsync();
             

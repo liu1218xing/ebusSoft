@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Ebus.Application.Shared.Stations.Dto;
+using Ebus.Core.Entities.Stations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,8 @@ namespace Ebus.Web.Api.AutoMapper
     {
         public CustomProfile()
         {
-            CreateMap<>();
+            CreateMap<Station, StationListDto>();
+
         }
     }
 }

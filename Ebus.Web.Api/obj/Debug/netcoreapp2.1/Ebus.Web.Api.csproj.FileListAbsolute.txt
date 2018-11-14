@@ -48,3 +48,7 @@ G:\git\Ebus\Ebus.Web.Api\obj\Debug\netcoreapp2.1\Ebus.Web.Api.RazorTargetAssembl
 G:\git\Ebus\Ebus.Web.Api\obj\Debug\netcoreapp2.1\Ebus.Web.Api.csproj.CopyComplete
 G:\git\Ebus\Ebus.Web.Api\obj\Debug\netcoreapp2.1\Ebus.Web.Api.dll
 G:\git\Ebus\Ebus.Web.Api\obj\Debug\netcoreapp2.1\Ebus.Web.Api.pdb
+G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.dll
+G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
+G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb
+G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.pdb

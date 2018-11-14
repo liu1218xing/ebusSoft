@@ -16,3 +16,8 @@ G:\git\Ebus\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Sha
 G:\git\Ebus\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.AssemblyInfo.cs
 G:\git\Ebus\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
 G:\git\Ebus\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb
+G:\git\Ebus\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Ebus.Domain.dll
+G:\git\Ebus\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Utils.dll
+G:\git\Ebus\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Ebus.Domain.pdb
+G:\git\Ebus\Ebus.Application.Shared\bin\Debug\netcoreapp2.1\Utils.pdb
+G:\git\Ebus\Ebus.Application.Shared\obj\Debug\netcoreapp2.1\Ebus.Application.Shared.csproj.CopyComplete

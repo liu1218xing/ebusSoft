@@ -8,7 +8,7 @@ namespace IRepository.Stations
 {
     public interface IStationsRepository
     {
-        Task<IEnumerable<Station>> GetAllStationsAsync();
+        Task<List<Station>> GetAllStationsAsync();
         void AddStations(Station station);
     }
 }

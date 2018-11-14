@@ -1,0 +1,268 @@
+2018-11-14 20:51:07.732 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-14 20:51:09.191 +08:00 [INF] Executed DbCommand (251ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Stations] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-11-14 20:51:09.602 +08:00 [INF] User profile is available. Using 'C:\Users\liuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-14 20:51:10.902 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-14 20:51:10.922 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-14 20:51:23.599 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2018-11-14 20:51:26.220 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api)
+2018-11-14 20:51:26.251 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-14 20:51:26.255 +08:00 [INF] Value1111............
+2018-11-14 20:51:26.270 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.7070000000000003ms.
+2018-11-14 20:51:26.305 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2018-11-14 20:51:26.585 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) in 352.14410000000004ms
+2018-11-14 20:51:26.636 +08:00 [INF] Request finished in 3042.239ms 200 application/json; charset=utf-8
+2018-11-14 20:51:27.801 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2018-11-14 20:51:27.807 +08:00 [INF] Request finished in 5.2357ms 404 
+2018-11-14 20:51:47.692 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-14 20:51:47.760 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-14 20:51:47.774 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-14 20:51:47.792 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-14 20:51:48.011 +08:00 [INF] Executed DbCommand (111ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[ArrivalTime], [s].[CityId], [s].[Code], [s].[CreationTime], [s].[CreatorUserId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DhoneticAlphabet], [s].[DisplayName], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[Name], [s].[ProvinceId]
+FROM [Stations] AS [s]
+2018-11-14 20:51:48.191 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 413.4356ms.
+2018-11-14 20:51:48.211 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ebus.Core.Entities.Stations.Station, Ebus.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-14 20:51:48.268 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 505.58700000000005ms
+2018-11-14 20:51:48.323 +08:00 [INF] Request finished in 633.1449ms 200 application/json; charset=utf-8
+2018-11-14 20:53:45.854 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-14 20:53:45.857 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-14 20:53:45.862 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-14 20:53:45.870 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-14 20:53:45.885 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[ArrivalTime], [s].[CityId], [s].[Code], [s].[CreationTime], [s].[CreatorUserId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DhoneticAlphabet], [s].[DisplayName], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[Name], [s].[ProvinceId]
+FROM [Stations] AS [s]
+2018-11-14 20:53:45.896 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.031000000000002ms.
+2018-11-14 20:53:45.902 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ebus.Core.Entities.Stations.Station, Ebus.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-14 20:53:45.905 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 43.8102ms
+2018-11-14 20:53:45.907 +08:00 [INF] Request finished in 52.8316ms 200 application/json; charset=utf-8
+2018-11-14 22:01:55.093 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-14 22:01:57.363 +08:00 [INF] Executed DbCommand (200ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Stations] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-11-14 22:01:57.604 +08:00 [INF] User profile is available. Using 'C:\Users\liuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-14 22:01:58.899 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-14 22:01:58.896 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-14 22:02:12.898 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2018-11-14 22:02:13.266 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api)
+2018-11-14 22:02:13.286 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-14 22:02:13.289 +08:00 [INF] Value1111............
+2018-11-14 22:02:13.297 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.8229ms.
+2018-11-14 22:02:13.317 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2018-11-14 22:02:13.537 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) in 259.4448ms
+2018-11-14 22:02:13.558 +08:00 [INF] Request finished in 659.565ms 200 application/json; charset=utf-8
+2018-11-14 22:02:26.117 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-14 22:02:26.143 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-14 22:02:26.151 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 4.646ms
+2018-11-14 22:02:26.155 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Ebus.Application.Stations.StationAppService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-14 22:02:26.790 +08:00 [ERR] Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Ebus.Application.Stations.StationAppService'.
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Ebus.Application.Stations.StationAppService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-14 22:02:26.821 +08:00 [INF] Request finished in 704.1262ms 500 application/json
+2018-11-14 22:02:28.897 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-14 22:02:28.900 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-14 22:02:28.905 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 1.7589000000000001ms
+2018-11-14 22:02:28.913 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Ebus.Application.Stations.StationAppService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-14 22:02:28.984 +08:00 [ERR] Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Ebus.Application.Stations.StationAppService'.
+System.InvalidOperationException: Unable to resolve service for type 'AutoMapper.IMapper' while attempting to activate 'Ebus.Application.Stations.StationAppService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-14 22:02:29.044 +08:00 [INF] Request finished in 147.212ms 500 application/json
+2018-11-14 22:03:39.552 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-14 22:03:40.118 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Stations] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-11-14 22:03:40.198 +08:00 [INF] User profile is available. Using 'C:\Users\liuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-14 22:03:40.614 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-14 22:03:40.614 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-14 22:03:41.458 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2018-11-14 22:03:41.751 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api)
+2018-11-14 22:03:41.781 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-14 22:03:41.784 +08:00 [INF] Value1111............
+2018-11-14 22:03:41.799 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.8513ms.
+2018-11-14 22:03:41.826 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2018-11-14 22:03:41.942 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) in 174.11960000000002ms
+2018-11-14 22:03:41.955 +08:00 [INF] Request finished in 498.8314ms 200 application/json; charset=utf-8
+2018-11-14 22:03:46.325 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-14 22:03:46.345 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-14 22:03:46.361 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-14 22:03:46.376 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-14 22:03:46.696 +08:00 [INF] Executed DbCommand (220ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[ArrivalTime], [s].[CityId], [s].[Code], [s].[CreationTime], [s].[CreatorUserId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DhoneticAlphabet], [s].[DisplayName], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[Name], [s].[ProvinceId]
+FROM [Stations] AS [s]
+2018-11-14 22:03:46.966 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 602.3751ms.
+2018-11-14 22:03:47.005 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ebus.Application.Shared.Stations.Dto.StationListDto, Ebus.Application.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-14 22:03:47.045 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 697.8696ms
+2018-11-14 22:03:47.060 +08:00 [INF] Request finished in 735.8299ms 200 application/json; charset=utf-8

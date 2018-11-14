@@ -6,7 +6,14 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using AutoMapper;
+using Ebus.Application.Shared.FluentValidation;
+using Ebus.Application.Shared.Stations;
+using Ebus.Application.Shared.Stations.Dto;
+using Ebus.Application.Stations;
 using Ebus.EntityFrameworkCore.EntityFrameworkCore;
+using Ebus.Web.Api.Extensions;
+using FluentValidation;
 using IRepository;
 using IRepository.Stations;
 using Microsoft.AspNetCore.Builder;
@@ -38,10 +45,12 @@ namespace Ebus.Web.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<EbusDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddScoped<IStationAppService, StationAppService>();
             services.AddScoped<IStationsRepository, StationsRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddAutoMapper();
 
+            services.AddTransient<IValidator<StationListDto>, StationListDtoValidator>();
             //#region AutoFac
 
             //实例化 AutoFac  容器   
@@ -67,7 +76,7 @@ namespace Ebus.Web.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -77,7 +86,8 @@ namespace Ebus.Web.Api
             {
                 app.UseHsts();
             }
-            app.UseExceptionHandler(); 
+            app.UseMyExceptionHandler(loggerFactory);
+            //app.UseExceptionHandler(); 
             app.UseHttpsRedirection();
             app.UseMvc();
         }
