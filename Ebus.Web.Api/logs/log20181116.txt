@@ -1,0 +1,532 @@
+2018-11-16 17:39:15.015 +08:00 [INF] User profile is available. Using 'C:\Users\dzliuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-16 17:40:18.523 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-16 17:40:19.046 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-16 17:40:19.925 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-16 17:40:20.839 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-16 17:40:22.015 +08:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[ArrivalTime], [s].[CityId], [s].[Code], [s].[CreationTime], [s].[CreatorUserId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DhoneticAlphabet], [s].[DisplayName], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[Name]
+FROM [Stations] AS [s]
+2018-11-16 17:40:22.178 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2208.9933ms.
+2018-11-16 17:40:22.214 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ebus.Application.Shared.Stations.Dto.StationListDto, Ebus.Application.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-16 17:40:22.375 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 3042.6764000000003ms
+2018-11-16 17:40:22.414 +08:00 [INF] Request finished in 3897.2528ms 200 application/json; charset=utf-8
+2018-11-16 17:40:23.196 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2018-11-16 17:40:23.305 +08:00 [INF] Request finished in 109.6896ms 404 
+2018-11-16 17:44:15.859 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/stations application/json 74
+2018-11-16 17:44:15.902 +08:00 [INF] Route matched with {action = "Post", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api)
+2018-11-16 17:44:16.037 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) with arguments (["Ebus.Application.Shared.Stations.Dto.CreateStationDto"]) - Validation state: "Valid"
+2018-11-16 17:44:16.277 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) in 371.6642ms
+2018-11-16 17:44:16.282 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> Station (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Core.Entities.Stations.Station (Destination member list)
+
+Unmapped properties:
+City
+LineStations
+IsDeleted
+DeleterUserId
+DeletionTime
+LastModificationTime
+LastModifierUserId
+CreationTime
+CreatorUserId
+Id
+
+   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 48
+   at lambda_method(Closure , CreateStationDto , Station , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 229
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 32
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 17:44:16.838 +08:00 [ERR] 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> Station (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Core.Entities.Stations.Station (Destination member list)
+
+Unmapped properties:
+City
+LineStations
+IsDeleted
+DeleterUserId
+DeletionTime
+LastModificationTime
+LastModifierUserId
+CreationTime
+CreatorUserId
+Id
+
+AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> Station (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Core.Entities.Stations.Station (Destination member list)
+
+Unmapped properties:
+City
+LineStations
+IsDeleted
+DeleterUserId
+DeletionTime
+LastModificationTime
+LastModifierUserId
+CreationTime
+CreatorUserId
+Id
+
+   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 48
+   at lambda_method(Closure , CreateStationDto , Station , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 229
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 32
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 17:44:16.947 +08:00 [INF] Request finished in 1089.1011ms 500 application/json
+2018-11-16 17:44:46.383 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/stations application/json 76
+2018-11-16 17:44:46.412 +08:00 [INF] Route matched with {action = "Post", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api)
+2018-11-16 17:44:46.437 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) with arguments ([""]) - Validation state: "Invalid"
+2018-11-16 17:44:46.444 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.BadRequestResult in 0.5383ms.
+2018-11-16 17:44:46.457 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 400
+2018-11-16 17:44:46.459 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) in 31.552500000000002ms
+2018-11-16 17:44:46.462 +08:00 [INF] Request finished in 80.0074ms 400 
+2018-11-16 17:48:09.096 +08:00 [INF] User profile is available. Using 'C:\Users\dzliuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-16 17:48:11.453 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-16 17:48:15.524 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2018-11-16 17:48:16.031 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api)
+2018-11-16 17:48:16.368 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-16 17:48:16.386 +08:00 [INF] Value1111............
+2018-11-16 17:48:16.398 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.4703ms.
+2018-11-16 17:48:16.417 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2018-11-16 17:48:16.790 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) in 740.8894ms
+2018-11-16 17:48:16.854 +08:00 [INF] Request finished in 1329.2144ms 200 application/json; charset=utf-8
+2018-11-16 17:48:31.971 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/stations application/json 74
+2018-11-16 17:48:32.363 +08:00 [INF] Route matched with {action = "Post", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api)
+2018-11-16 17:48:33.150 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) with arguments (["Ebus.Application.Shared.Stations.Dto.CreateStationDto"]) - Validation state: "Valid"
+2018-11-16 18:00:52.221 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) in 739854.4209ms
+2018-11-16 18:00:52.243 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> Station (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Core.Entities.Stations.Station (Destination member list)
+
+Unmapped properties:
+City
+LineStations
+IsDeleted
+DeleterUserId
+DeletionTime
+LastModificationTime
+LastModifierUserId
+CreationTime
+CreatorUserId
+Id
+
+   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 48
+   at lambda_method(Closure , CreateStationDto , Station , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 229
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 32
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 18:01:11.909 +08:00 [ERR] 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> Station (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Core.Entities.Stations.Station (Destination member list)
+
+Unmapped properties:
+City
+LineStations
+IsDeleted
+DeleterUserId
+DeletionTime
+LastModificationTime
+LastModifierUserId
+CreationTime
+CreatorUserId
+Id
+
+AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> Station (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Core.Entities.Stations.Station (Destination member list)
+
+Unmapped properties:
+City
+LineStations
+IsDeleted
+DeleterUserId
+DeletionTime
+LastModificationTime
+LastModifierUserId
+CreationTime
+CreatorUserId
+Id
+
+   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 48
+   at lambda_method(Closure , CreateStationDto , Station , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 229
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 32
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 18:01:18.875 +08:00 [INF] Request finished in 766903.7231ms 500 application/json
+2018-11-16 18:04:39.316 +08:00 [INF] User profile is available. Using 'C:\Users\dzliuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-16 18:04:48.911 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/stations application/json 74
+2018-11-16 18:04:49.274 +08:00 [INF] Route matched with {action = "Post", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api)
+2018-11-16 18:04:49.929 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) with arguments (["Ebus.Application.Shared.Stations.Dto.CreateStationDto"]) - Validation state: "Valid"
+2018-11-16 18:04:50.522 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-16 18:04:51.487 +08:00 [INF] Executed DbCommand (63ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p6='?' (DbType = Int64), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 64), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int64), @p13='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Stations] ([Address], [ArrivalTime], [CityId], [Code], [CreationTime], [CreatorUserId], [DeleterUserId], [DeletionTime], [DhoneticAlphabet], [DisplayName], [IsDeleted], [LastModificationTime], [LastModifierUserId], [Name])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [Id]
+FROM [Stations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2018-11-16 18:04:51.649 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) in 2359.9244000000003ms
+2018-11-16 18:04:51.675 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> StationListDto (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Application.Shared.Stations.Dto.StationListDto (Destination member list)
+
+Unmapped properties:
+CreationTime
+City
+LineStations
+Id
+
+   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 48
+   at lambda_method(Closure , CreateStationDto , StationListDto , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 229
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 35
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 18:04:52.165 +08:00 [ERR] 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> StationListDto (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Application.Shared.Stations.Dto.StationListDto (Destination member list)
+
+Unmapped properties:
+CreationTime
+City
+LineStations
+Id
+
+AutoMapper.AutoMapperConfigurationException: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+=============================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+CreateStationDto -> StationListDto (Destination member list)
+Ebus.Application.Shared.Stations.Dto.CreateStationDto -> Ebus.Application.Shared.Stations.Dto.StationListDto (Destination member list)
+
+Unmapped properties:
+CreationTime
+City
+LineStations
+Id
+
+   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 48
+   at lambda_method(Closure , CreateStationDto , StationListDto , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TSource,TDestination](TSource source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 229
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 35
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 18:04:52.292 +08:00 [INF] Request finished in 3385.0882ms 500 application/json
+2018-11-16 18:06:51.180 +08:00 [INF] User profile is available. Using 'C:\Users\dzliuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-16 18:06:51.854 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-16 18:06:53.327 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2018-11-16 18:06:54.785 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api)
+2018-11-16 18:06:55.028 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-16 18:06:55.112 +08:00 [INF] Value1111............
+2018-11-16 18:06:55.129 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.4358ms.
+2018-11-16 18:06:55.185 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2018-11-16 18:06:55.456 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) in 456.023ms
+2018-11-16 18:06:55.749 +08:00 [INF] Request finished in 2431.6332ms 200 application/json; charset=utf-8
+2018-11-16 18:07:00.185 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/stations application/json 74
+2018-11-16 18:07:00.365 +08:00 [INF] Route matched with {action = "Post", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api)
+2018-11-16 18:07:00.677 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) with arguments (["Ebus.Application.Shared.Stations.Dto.CreateStationDto"]) - Validation state: "Valid"
+2018-11-16 18:07:01.503 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-16 18:07:02.159 +08:00 [INF] Executed DbCommand (50ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p6='?' (DbType = Int64), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 64), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int64), @p13='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Stations] ([Address], [ArrivalTime], [CityId], [Code], [CreationTime], [CreatorUserId], [DeleterUserId], [DeletionTime], [DhoneticAlphabet], [DisplayName], [IsDeleted], [LastModificationTime], [LastModifierUserId], [Name])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [Id]
+FROM [Stations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2018-11-16 18:07:02.303 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkResult in 1593.4559000000002ms.
+2018-11-16 18:07:02.331 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2018-11-16 18:07:02.337 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) in 1966.4773ms
+2018-11-16 18:07:02.351 +08:00 [INF] Request finished in 2166.175ms 200 
+2018-11-16 18:07:29.785 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-16 18:07:29.820 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-16 18:07:29.857 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-16 18:07:29.913 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-16 18:07:30.363 +08:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[ArrivalTime], [s].[CityId], [s].[Code], [s].[CreationTime], [s].[CreatorUserId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DhoneticAlphabet], [s].[DisplayName], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[Name]
+FROM [Stations] AS [s]
+2018-11-16 18:07:30.663 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 768.1162ms.
+2018-11-16 18:07:30.678 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ebus.Application.Shared.Stations.Dto.StationListDto, Ebus.Application.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-16 18:07:30.750 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 895.59750000000008ms
+2018-11-16 18:07:31.045 +08:00 [INF] Request finished in 1259.4413ms 200 application/json; charset=utf-8
+2018-11-16 18:08:12.010 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/stations application/json 62
+2018-11-16 18:08:12.013 +08:00 [INF] Route matched with {action = "Post", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api)
+2018-11-16 18:08:12.020 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) with arguments (["Ebus.Application.Shared.Stations.Dto.CreateStationDto"]) - Validation state: "Valid"
+2018-11-16 18:08:12.030 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-16 18:08:12.095 +08:00 [ERR] Failed executing DbCommand (53ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p6='?' (DbType = Int64), @p7='?' (DbType = DateTime2), @p8='?' (Size = 4000), @p9='?' (Size = 64), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Int64), @p13='?' (Size = 32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Stations] ([Address], [ArrivalTime], [CityId], [Code], [CreationTime], [CreatorUserId], [DeleterUserId], [DeletionTime], [DhoneticAlphabet], [DisplayName], [IsDeleted], [LastModificationTime], [LastModifierUserId], [Name])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [Id]
+FROM [Stations]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+System.Data.SqlClient.SqlException (0x80131904): INSERT 语句与 FOREIGN KEY 约束"FK_Stations_Cities_CityId"冲突。该冲突发生于数据库"Ebus6_2018"，表"dbo.Cities", column 'Id'。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:aa205573-4da7-4d20-9c3d-1a0f84ae290e
+Error Number:547,State:0,Class:16
+2018-11-16 18:08:12.194 +08:00 [ERR] An exception occurred in the database while saving changes for context type 'Ebus.EntityFrameworkCore.EntityFrameworkCore.EbusDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"FK_Stations_Cities_CityId"冲突。该冲突发生于数据库"Ebus6_2018"，表"dbo.Cities", column 'Id'。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"FK_Stations_Cities_CityId"冲突。该冲突发生于数据库"Ebus6_2018"，表"dbo.Cities", column 'Id'。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2018-11-16 18:08:12.306 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Post (Ebus.Web.Api) in 287.7924ms
+2018-11-16 18:08:12.314 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"FK_Stations_Cities_CityId"冲突。该冲突发生于数据库"Ebus6_2018"，表"dbo.Cities", column 'Id'。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Repository.UnitOfWork.SaveAsync() in G:\study\git\ebusSoft\Repository\UnitOfWork.cs:line 21
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 34
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 18:08:12.638 +08:00 [ERR] An error occurred while updating the entries. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"FK_Stations_Cities_CityId"冲突。该冲突发生于数据库"Ebus6_2018"，表"dbo.Cities", column 'Id'。
+语句已终止。
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Repository.UnitOfWork.SaveAsync() in G:\study\git\ebusSoft\Repository\UnitOfWork.cs:line 21
+   at Ebus.Application.Stations.StationAppService.Create(CreateStationDto input) in G:\study\git\ebusSoft\Ebus.Application\Stations\StationAppService.cs:line 34
+   at Ebus.Web.Api.Controllers.StationsController.Post(CreateStationDto createStationDto) in G:\study\git\ebusSoft\Ebus.Web.Api\Controllers\StationsController.cs:line 51
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2018-11-16 18:08:12.723 +08:00 [INF] Request finished in 713.0104ms 500 application/json

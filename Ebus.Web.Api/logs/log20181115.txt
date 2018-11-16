@@ -1,0 +1,65 @@
+2018-11-15 09:51:38.231 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-15 09:51:38.912 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Stations] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-11-15 09:51:39.069 +08:00 [INF] User profile is available. Using 'C:\Users\dzliuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-11-15 09:51:39.852 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-15 09:51:39.887 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-15 09:51:42.292 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2018-11-15 09:51:42.681 +08:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api)
+2018-11-15 09:51:42.818 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-15 09:51:42.867 +08:00 [INF] Value1111............
+2018-11-15 09:51:42.916 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.3919ms.
+2018-11-15 09:51:42.981 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2018-11-15 09:51:43.144 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.ValuesController.Get (Ebus.Web.Api) in 356.7144ms
+2018-11-15 09:51:43.314 +08:00 [INF] Request finished in 1023.6531ms 200 application/json; charset=utf-8
+2018-11-15 09:51:43.706 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2018-11-15 09:51:43.722 +08:00 [INF] Request finished in 16.0575ms 404 
+2018-11-15 09:56:51.991 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/stations  
+2018-11-15 09:56:52.015 +08:00 [INF] Route matched with {action = "Get", controller = "Stations"}. Executing action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api)
+2018-11-15 09:56:52.030 +08:00 [INF] Executing action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) - Validation state: "Valid"
+2018-11-15 09:56:52.043 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-15 09:56:52.133 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[ArrivalTime], [s].[CityId], [s].[Code], [s].[CreationTime], [s].[CreatorUserId], [s].[DeleterUserId], [s].[DeletionTime], [s].[DhoneticAlphabet], [s].[DisplayName], [s].[IsDeleted], [s].[LastModificationTime], [s].[LastModifierUserId], [s].[Name], [s].[ProvinceId]
+FROM [Stations] AS [s]
+2018-11-15 09:56:52.278 +08:00 [INF] Executed action method Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 245.3478ms.
+2018-11-15 09:56:52.288 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ebus.Application.Shared.Stations.Dto.StationListDto, Ebus.Application.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2018-11-15 09:56:52.310 +08:00 [INF] Executed action Ebus.Web.Api.Controllers.StationsController.Get (Ebus.Web.Api) in 291.8493ms
+2018-11-15 09:56:52.323 +08:00 [INF] Request finished in 331.7499ms 200 application/json; charset=utf-8
+2018-11-15 11:02:27.854 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'EbusDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-11-15 11:02:28.782 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Stations] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-11-15 11:02:29.104 +08:00 [INF] User profile is available. Using 'C:\Users\dzliuxing\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

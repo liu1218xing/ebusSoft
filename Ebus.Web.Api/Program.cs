@@ -29,22 +29,22 @@ namespace Ebus.Web.Api
 
             var host = CreateWebHostBuilder(args).Build();
 
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+            //using (var scope = host.Services.CreateScope())
+            //{
+            //    var services = scope.ServiceProvider;
+            //    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
 
-                try
-                {
-                    var myContext = services.GetRequiredService<EbusDbContext>();
-                    MyContextSeed.SeedAsync(myContext, loggerFactory).Wait();
-                }
-                catch (Exception e)
-                {
-                    var logger = loggerFactory.CreateLogger<Program>();
-                    logger.LogError(e, "Error occured seeding the Database.");
-                }
-            }
+            //    try
+            //    {
+            //        var myContext = services.GetRequiredService<EbusDbContext>();
+            //        //MyContextSeed.SeedAsync(myContext, loggerFactory).Wait();
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        var logger = loggerFactory.CreateLogger<Program>();
+            //        logger.LogError(e, "Error occured seeding the Database.");
+            //    }
+            //}
 
             host.Run();
         }

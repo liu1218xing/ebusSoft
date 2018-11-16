@@ -454,6 +454,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Ebus.Core": "1.0.0",
           "Ebus.Domain": "1.0.0",
           "FluentValidation": "8.0.100",
           "automapper": "7.0.1"
@@ -1086,11 +1087,10 @@
       ]
     },
     "System.Collections.Concurrent/4.3.0": {
-      "sha512": "fu4SvisargPpI4z2+69ocBNmQLS98WyvsA1dP35c2dxRJnEd/+cSmGnv/GSNxbIs7wtveGB8tzFLYABPFkX7Kg==",
+      "sha512": "ztl69Xp0Y/UXCL+3v3tEU+lIy+bvjKNUmopn1wep/a291pVPK7dxBd6T7WnlQqRog+d1a/hSsgRsmFnIBKTPLQ==",
       "type": "package",
       "path": "system.collections.concurrent/4.3.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1153,7 +1153,7 @@
       ]
     },
     "System.ComponentModel/4.3.0": {
-      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "sha512": "T9X8vQ8eJcuWGircTn6vXo+a0vAQ0Ia37kTrPZZ9EMk487vni1jtDytW5ralz2WY6L/kM1lNAV3yfv4PdYv84A==",
       "type": "package",
       "path": "system.componentmodel/4.3.0",
       "files": [
@@ -2056,11 +2056,10 @@
       ]
     },
     "System.Threading/4.3.0": {
-      "sha512": "4j+rHu0q/NVTrCrtwVeVy1WXpzMTB+V63DG2pI2aopEurxLtjYxqYFB0RQRahClkAzonmF7rTTPLnAGRfbV37w==",
+      "sha512": "VkUS0kOBcUf3Wwm0TSbrevDDZ6BlM+b/HRiapRFWjM5O0NS0LviG0glKmFK+hhPDd1XFeSdU1GmlLhb2CoVpIw==",
       "type": "package",
       "path": "system.threading/4.3.0",
       "files": [
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2192,7 +2191,7 @@
       ]
     },
     "System.ValueTuple/4.5.0": {
-      "sha512": "fa3P1cPe2SlrjCjJ/yc3mcXkDj4GQORmileNFYBtBZh2qddzwRubagAkj8yz/yF9oLvJVqaZYar9l2SCqNKDJg==",
+      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
       "type": "package",
       "path": "system.valuetuple/4.5.0",
       "files": [
@@ -2268,23 +2267,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\liuxing\\.nuget\\packages\\": {},
+    "C:\\Users\\dzliuxing\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\git\\Ebus\\Ebus.Application\\Ebus.Application.csproj",
+      "projectUniqueName": "G:\\study\\git\\ebusSoft\\Ebus.Application\\Ebus.Application.csproj",
       "projectName": "Ebus.Application",
-      "projectPath": "G:\\git\\Ebus\\Ebus.Application\\Ebus.Application.csproj",
-      "packagesPath": "C:\\Users\\liuxing\\.nuget\\packages\\",
-      "outputPath": "G:\\git\\Ebus\\Ebus.Application\\obj\\",
+      "projectPath": "G:\\study\\git\\ebusSoft\\Ebus.Application\\Ebus.Application.csproj",
+      "packagesPath": "C:\\Users\\dzliuxing\\.nuget\\packages\\",
+      "outputPath": "G:\\study\\git\\ebusSoft\\Ebus.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\liuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dzliuxing\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2297,11 +2296,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "G:\\git\\Ebus\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj": {
-              "projectPath": "G:\\git\\Ebus\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj"
+            "G:\\study\\git\\ebusSoft\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj": {
+              "projectPath": "G:\\study\\git\\ebusSoft\\Ebus.Application.Shared\\Ebus.Application.Shared.csproj"
             },
-            "G:\\git\\Ebus\\IRepository\\IRepository.csproj": {
-              "projectPath": "G:\\git\\Ebus\\IRepository\\IRepository.csproj"
+            "G:\\study\\git\\ebusSoft\\IRepository\\IRepository.csproj": {
+              "projectPath": "G:\\study\\git\\ebusSoft\\IRepository\\IRepository.csproj"
             }
           }
         }

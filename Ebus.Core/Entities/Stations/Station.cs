@@ -4,11 +4,16 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Ebus.Core.Entities.Base;
 
 namespace Ebus.Core.Entities.Stations
 {
     public class Station : FullAuditedEntity
     {
+        public Station()
+        {
+            LineStations = new List<LineStation>();
+        }
         //
         // 摘要:
         //     Maximum length of the Abp.Application.Editions.Edition.Name property.
@@ -36,8 +41,10 @@ namespace Ebus.Core.Entities.Stations
         public string DhoneticAlphabet { get; set; }
         public string Address { get; set; }
         public string ArrivalTime { get; set; }
-        public int? ProvinceId { get; set; }
-        public int? CityId { get; set; }
+        public int CityId { get; set; }
+        public City City { get; set; }
+        public List<LineStation> LineStations { get; set; }
+
 
 
     }

@@ -27,3 +27,14 @@ G:\git\Ebus\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Core.pdb
 G:\git\Ebus\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Domain.pdb
 G:\git\Ebus\Ebus.Application\bin\Debug\netcoreapp2.1\Utils.pdb
 G:\git\Ebus\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.csproj.CopyComplete
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Core.dll
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Domain.dll
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\IRepository.dll
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Utils.dll
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\IRepository.pdb
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Core.pdb
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Ebus.Domain.pdb
+G:\study\git\ebusSoft\Ebus.Application\bin\Debug\netcoreapp2.1\Utils.pdb
+G:\study\git\ebusSoft\Ebus.Application\obj\Debug\netcoreapp2.1\Ebus.Application.csproj.CopyComplete

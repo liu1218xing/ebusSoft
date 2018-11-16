@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Ebus.Core\Ebus.Core.csproj" />
     <ProjectReference Include="..\Ebus.Domain\Ebus.Domain.csproj" />
   </ItemGroup>
 

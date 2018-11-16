@@ -9,5 +9,8 @@ namespace Ebus.Application.Shared.Stations
     public interface IStationAppService
     {
         Task<List<StationListDto>> GetStations();
+        Task<StationListDto> GetById(int id);
+        Task<StationListDto> Create(CreateStationDto input);
+
     }
 }

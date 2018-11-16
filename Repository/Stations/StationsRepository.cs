@@ -18,15 +18,34 @@ namespace Repository.Stations
             _ebusDbContext = ebusDbContext;
         }
 
-        public void AddStations(Station station)
+        public void Add(Station station)
         {
             _ebusDbContext.Stations.Add(station);
+        }
+
+       
+
+       
+
+        public void Delete(Station station)
+        {
+            _ebusDbContext.Stations.Remove(station);
         }
 
         public async Task<List<Station>> GetAllStationsAsync()
         {
             return await _ebusDbContext.Stations.ToListAsync();
             
+        }
+
+        public async Task<Station> GetByIdAsync(int id)
+        {
+            return await _ebusDbContext.Stations.FindAsync(id);
+        }
+
+        public void Update(Station station)
+        {
+            _ebusDbContext.Entry(station).State = EntityState.Modified;
         }
     }
 }

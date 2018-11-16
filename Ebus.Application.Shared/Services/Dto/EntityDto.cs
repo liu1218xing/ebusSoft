@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ebus.Application.Shared.Dto
+namespace Ebus.Application.Shared.Services.Dto
 {
     /// <summary>
     /// A shortcut of <see cref="EntityDto{TPrimaryKey}"/> for most used primary key type (<see cref="int"/>).

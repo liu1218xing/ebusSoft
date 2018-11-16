@@ -9,6 +9,10 @@ namespace IRepository.Stations
     public interface IStationsRepository
     {
         Task<List<Station>> GetAllStationsAsync();
-        void AddStations(Station station);
+        Task<Station> GetByIdAsync(int id);
+        void Add(Station station);
+        void Delete(Station station);
+        void Update(Station station);
+        
     }
 }

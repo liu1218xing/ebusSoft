@@ -52,3 +52,11 @@ G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.dll
 G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
 G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb
 G:\git\Ebus\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.pdb
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.dll
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.dll
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\IRepository.dll
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Repository.dll
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.Shared.pdb
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Ebus.Application.pdb
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\IRepository.pdb
+G:\study\git\ebusSoft\Ebus.Web.Api\bin\Debug\netcoreapp2.1\Repository.pdb

@@ -13,7 +13,9 @@ namespace Ebus.Web.Api.AutoMapper
         public CustomProfile()
         {
             CreateMap<Station, StationListDto>();
-
+           
+            CreateMap<Station, CreateStationDto>();
+            CreateMap<CreateStationDto,Station>();
         }
     }
 }

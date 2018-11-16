@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ebus.Application.Shared.Dto
+namespace Ebus.Application.Shared.Services.Dto
 {
     public interface IEntityDto : IEntityDto<int>
     {
